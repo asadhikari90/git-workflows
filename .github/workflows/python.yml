@@ -32,11 +32,17 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.x  #Can be parametized if needed
+          
+      - name: Checkout requirements repo
+        uses: actions/checkout@v2
+        with:
+           repository: asadhikari90/python/*.txt  # Replace with the repository owner and name where requirements.txt is located
+           ref: master # Replace with the branch name of the repository
 
       - name : Installing Required Packages 
         run :  | 
              pip install pytest coverage
-             pip install -r asadhikari90/python/requirements.txt@master
+             pip install -r requirements.txt
              
 
       - name : Run Code Test
