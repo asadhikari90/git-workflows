@@ -36,7 +36,8 @@ jobs:
       - name : Installing Required Packages 
         run :  | 
              pip install pytest coverage
-             pip install pluggy packaging iniconfig
+             pip install -r asadhikari90/python/blob/main/requirements.txt
+             #pip install pluggy packaging iniconfig
 
       - name : Run Code Test
         run : coverage run -m pytest https://github.com/asadhikari90/python/*.py #Give test file Path
