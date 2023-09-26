@@ -33,15 +33,11 @@ jobs:
         with:
           python-version: 3.x  #Can be parametized if needed
           
-      - name: Checkout requirements repo
-        uses: actions/checkout@v2
-        with:
-           repository: asadhikari90/python/*.txt  # Replace with the repository owner and name where requirements.txt is located
-           ref: master # Replace with the branch name of the repository
-
+      
       - name : Installing Required Packages 
         run :  | 
              pip install pytest coverage
+             curl -o requirements.txt https://github.com/asadhikari90/python/blob/main/requirements.txt
              pip install -r requirements.txt
              
 
