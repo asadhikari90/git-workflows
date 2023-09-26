@@ -36,7 +36,7 @@ jobs:
       - name : Installing Required Packages 
         run :  | 
              pip install pytest coverage
-             pip install -r /asadhikari90/python/requirements.txt
+             pip install -r https://github.com/asadhikari90/python/requirements.txt
 
       - name : Run Code Test
         run : coverage run -m pytest https://github.com/asadhikari90/python/*.py #Give test file Path
